@@ -5,17 +5,18 @@ public class TestLab3 {
     CountingDictionary dict = new CountingDictionary();
     reader.addFileToDict(dict);
     dict.printDict();
-    //MyPriorityQueue<Word> myQ = new MyPriorityQueue<Word>(true);
-    //myQ.insert(new Word("hello" , 3));
-    //myQ.insert(new Word("sarah", 1));
-    //myQ.insert(new Word("samantha", 1));
-    //myQ.insert(new Word("hi", 7));
-    /* Vector<Word> words = new Vector<Word>();
+    System.out.println(dict.leastCommon());
+    System.out.println(dict.mostCommon());
+    
+    System.out.println("Let's test the priority queue");
+    MyPriorityQueue<Word> myQ = new MyPriorityQueue<Word>(true);
+
+     Vector<Word> words = new Vector<Word>();
     words.add(new Word("Samantha", 1));
     words.add(new Word("hi", 7));
     words.add(new Word("hello", 3));
     words.add(new Word("sarah", 1));
-    words.add(new Word("Ashira", 3));
+    words.add(new Word("Ashes", 3));
     words.add(new Word(" ", 2));
     myQ.build(words);
     System.out.println(myQ.remove());
@@ -23,10 +24,9 @@ public class TestLab3 {
     System.out.println(myQ.remove());
     System.out.println(myQ.remove());
     System.out.println(myQ.remove());
-    System.out.println(myQ.remove()); */
-    System.out.println(dict.leastCommon());
-    System.out.println(dict.mostCommon());
-
+    System.out.println(myQ.remove()); 
+    
+    System.out.println("Let's test the dictionary again but on different text files");
     ReadFile readerTwo = new ReadFile("TextFile2.txt");
     CountingDictionary dictTwo = new CountingDictionary();
 
